@@ -14,12 +14,21 @@
  *= require_self
  */
 
-body { 
-	padding-top: 50px;
+/* FONTS */
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,900');
+
+* {
+	font-family: 'Lato', sans-serif;
 }
 
-.navbar-purple {
-	background-color: #43b02a !important;
+body { 
+	padding-top: 50px;
+	/*background-color: #ffe2ff;*/
+}
+
+#navbar-purple {
+	/*background-color: #E079E0;
+	color: #fff;*/
 }
 
 .news-feed {
