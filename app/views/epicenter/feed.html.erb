@@ -1,0 +1,47 @@
+<div class="container-fluid">
+
+	<div class="row">
+
+		<div class="col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h2>Profile</h2>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6">
+				<div class="panel panel-default" id="news-feed">
+				    <div class="panel-heading">
+					    <h1>@<%= current_user.username %>'s News Feed</h1>
+				    </div>
+				    <div class="panel-body">
+				  		<p>Here is what your "friends" are saying:</p>
+						<% @following_tweets.each do |tweet| %>
+						<div>
+						    <p>
+						    	@<%= link_to tweet.user.username, show_user_path(id: tweet.user.id) %>
+						    	@<%= tweet.user.username %>
+						    </p>
+						    <p><%= tweet.message.html_safe %></p>
+						</div>
+						<% end %>
+					</div>
+				</div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h2>Who to Follow?</h2>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h2>Advertising</h2>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
